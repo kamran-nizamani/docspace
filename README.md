@@ -20,7 +20,7 @@ Requirements: Node.js 20+ and npm.
 2. Start development server: npm run dev
 3. Open the URL printed by Vite.
 4. Run tests: npm test
-5. Create a production build: npm run build
+5. Create a production build: npm run build (the prebuild hook runs the test suite first)
 
 ## Demo walkthrough
 The app seeds three demo identities on first launch:
