@@ -13,7 +13,7 @@ Project: DocSpace — AI-Native Full Stack Developer Assignment
 - Walkthrough recording guide: WALKTHROUGH_SCRIPT.md
 
 ## Live product
-Production deployment: https://docspace-rosy.vercel.app
+Production deployment: https://docspace-kamrans-projects-4c60ae36.vercel.app
 
 Vercel reports deployment state READY for commit 5dff2aa3385ebedaa571006a7ac532e1b620974a. Verify the URL in a normal browser before submitting.
 
