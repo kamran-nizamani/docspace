@@ -2,6 +2,8 @@
 
 A lightweight collaborative document workspace built for the Ajaia AI-Native Full Stack Developer assessment.
 
+**Live app:** https://docspace-rosy.vercel.app
+
 ## Features
 - Create, rename, edit, reopen, and delete documents.
 - Rich-text toolbar: bold, italic, underline, headings, bullet and numbered lists.
@@ -34,5 +36,5 @@ TXT and Markdown (.txt, .md, .markdown) files are supported. Files are read in t
 ## Persistence and security note
 This time-boxed MVP persists documents and sharing metadata in browser localStorage. Demo account switching is simulated, not authentication. Do not store confidential information. For production, replace the local adapter with a server-side database (e.g. Postgres/Supabase), authenticated sessions, server-enforced document ACLs, and storage-backed uploads.
 
-## Architecture
-See ARCHITECTURE.md for scope decisions and tradeoffs. See AI_WORKFLOW.md for AI usage and verification. See SUBMISSION.md for the deliverables inventory.
+## Architecture and submission
+See ARCHITECTURE.md for scope decisions and tradeoffs. See AI_WORKFLOW.md for AI usage and verification. See SUBMISSION.md for the deliverables inventory. Use WALKTHROUGH_SCRIPT.md to record the required 3–5 minute video.
