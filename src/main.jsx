@@ -35,6 +35,7 @@ function App() {
   const [saving, setSaving] = useState('saved');
   const editorRef = useRef(null);
   const fileRef = useRef(null);
+  const searchRef = useRef(null);
   const renameRef = useRef(null);
   const user = DEMO_USERS.find((item) => item.id === userId) || DEMO_USERS[0];
   const activeDoc = documents.find((doc) => doc.id === activeId && canReadDocument(doc, userId)) || null;
@@ -59,6 +60,18 @@ function App() {
     const id = window.setTimeout(() => setToast(''), 2800);
     return () => window.clearTimeout(id);
   }, [toast]);
+
+  useEffect(() => {
+    const onShortcut = (event) => {
+      if (!(event.metaKey || event.ctrlKey)) return;
+      const key = event.key.toLowerCase();
+      if (key === 'n') { event.preventDefault(); createNew(); }
+      if (key === 'k') { event.preventDefault(); searchRef.current?.focus(); }
+      if (key === 'o') { event.preventDefault(); fileRef.current?.click(); }
+    };
+    window.addEventListener('keydown', onShortcut);
+    return () => window.removeEventListener('keydown', onShortcut);
+  }, [userId]);
 
   const mine = useMemo(() => ownedDocuments(documents, userId), [documents, userId]);
   const shared = useMemo(() => sharedDocuments(documents, userId), [documents, userId]);
@@ -210,7 +223,8 @@ function App() {
       <div className="workspace">
         {sidebarOpen && <aside className="sidebar">
           <button className="new-doc-btn" onClick={createNew}><Plus size={17} strokeWidth={2.5} /> New document <span>⌘ N</span></button>
-          <div className="search-box"><Search size={16} /><input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Search documents" aria-label="Search documents" /><kbd>⌘ K</kbd></div>
+          <button className="import-doc-btn" onClick={() => fileRef.current?.click()}><Upload size={15} /> Import TXT or Markdown</button>
+          <div className="search-box"><Search size={16} /><input ref={searchRef} value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Search documents" aria-label="Search documents" /><kbd>⌘ K</kbd></div>
           <div className="nav-section-label">WORKSPACE</div>
           <nav className="side-nav">
             <button className={view === 'all' ? 'nav-item active' : 'nav-item'} onClick={() => setView('all')}><FolderOpen size={17} /><span>All documents</span><span className="nav-count">{mine.length + shared.length}</span></button>
