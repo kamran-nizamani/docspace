@@ -15,7 +15,7 @@ Project: DocSpace — AI-Native Full Stack Developer Assignment
 ## Live product
 Production deployment: https://docspace-kamrans-projects-4c60ae36.vercel.app
 
-Vercel reports deployment state READY for commit 8c82f42e04efc7b7583affe38e824ab371fd6e29. Verify the URL in a normal browser before submitting.
+Vercel reports deployment state READY for commit 44ac8a3790f53014eb1a5dd3e9faa0916eec461a. The build runs npm test through the prebuild hook before vite build. Verify the URL in a normal browser before submitting.
 
 ## Reviewer walkthrough
 Video URL: NOT RECORDED YET — record a 3–5 minute walkthrough using WALKTHROUGH_SCRIPT.md, upload it to Loom/YouTube/Google Drive with public or unlisted access, then replace this line and update WALKTHROUGH_VIDEO.txt.
@@ -35,6 +35,6 @@ Use the account switcher in the upper-right corner. Create or select a document 
 
 ## Verification status
 - Vercel production build: READY.
-- Automated tests: included; latest GitHub Actions test result still needs confirmation.
+- Automated tests: Vitest suite runs before the production build; the deployment reached READY. GitHub Actions status is separate and not independently confirmed.
 - Manual browser smoke test: candidate should verify create/edit/refresh/import/share/revoke before final submission.
 - Walkthrough video: pending candidate recording.
