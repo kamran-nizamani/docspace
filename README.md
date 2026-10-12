@@ -2,7 +2,7 @@
 
 A lightweight collaborative document workspace built for the Ajaia AI-Native Full Stack Developer assessment.
 
-**Live app:** https://docspace-rosy.vercel.app
+**Live app:** https://docspace-kamrans-projects-4c60ae36.vercel.app
 
 ## Features
 - Create, rename, edit, reopen, and delete documents.
