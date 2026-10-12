@@ -15,7 +15,7 @@ Project: DocSpace — AI-Native Full Stack Developer Assignment
 ## Live product
 Production deployment: https://docspace-kamrans-projects-4c60ae36.vercel.app
 
-Vercel reports deployment state READY for commit 5dff2aa3385ebedaa571006a7ac532e1b620974a. Verify the URL in a normal browser before submitting.
+Vercel reports deployment state READY for commit 8c82f42e04efc7b7583affe38e824ab371fd6e29. Verify the URL in a normal browser before submitting.
 
 ## Reviewer walkthrough
 Video URL: NOT RECORDED YET — record a 3–5 minute walkthrough using WALKTHROUGH_SCRIPT.md, upload it to Loom/YouTube/Google Drive with public or unlisted access, then replace this line and update WALKTHROUGH_VIDEO.txt.
